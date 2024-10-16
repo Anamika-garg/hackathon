@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container{
+    scrollbar-width: 0;
+}
+
+.d-none{
+    display: none;
+}
+
+.bg-img{
+    background: url('img.webp');
+    border-radius: 10px;
+    background-position: center;
+}
+
+.nav-backdrop{
+    backdrop-filter: blur(20px);
+}
+
+.card-bg{
+    background: rgb(247,247,247);
+}
+
