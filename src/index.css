@@ -29,3 +29,19 @@ html,body{
     background: rgb(247,247,247);
 }
 
+.sol-list{
+    list-style-type: circle;
+}
+
+.sol-list:hover{
+    text-decoration: underline;
+}
+
+.solution-div{
+    border: 1px solid black;
+}
+
+
+.solution-div:hover{
+    border: 1px dotted black;
+}
