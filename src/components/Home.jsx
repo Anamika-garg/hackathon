@@ -1,7 +1,5 @@
 import React from 'react'
-import img from '/img.webp'
 import { CiSearch } from "react-icons/ci";
-import laptop from '/laptop.webp';
 import {data} from '../../data'
 import Card from './Card';
 const Home = () => {
@@ -21,7 +19,7 @@ const Home = () => {
                 <div className="mt-[20px] card-con w-[100%] relative min-h-[30vh] gap-[10px] flex-wrap flex items-center justify-center">
 
                     {data.map((e)=>{
-                        return <Card key={e.id} content={e.content} img={e.img}/>
+                        return <Card key={e.name} content={e.name} img={`/${e.name}.webp`}/>
                     })}
                     
                 </div>

@@ -2,7 +2,13 @@ import React from 'react'
 import img from '/sol-img.webp'
 import { data } from '../../data'
 import SolutionCard from './SolutionCard'
+import { useParams } from 'react-router-dom'
 const Solution = () => {
+
+    const {device} = useParams();
+
+    const deviceIssue = data.find(item => item.name === device)?.issues || [];
+
     return (
         <>
             <div className='container m-auto w-[84vw] min-h-[100vh] relative flex flex-col items-center'>
@@ -31,11 +37,10 @@ const Solution = () => {
                     <div className="solution-outer flex flex-col min-h-[80vh] w-[100%] items-center gap-8">
 
                        {
-                        data.map((e)=>{
-                            return <SolutionCard/>
+                        deviceIssue.map((issue)=>{
+                            return <SolutionCard title={issue.title} type={issue.type} description={issue.description} device={device} id={issue.id}/>
                         })
                        }
-
                     </div>
                 </div>
             </div>
